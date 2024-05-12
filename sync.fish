@@ -8,5 +8,3 @@ cp -r $HOME/.config/{fish, fontconfig, fastfetch, sxhkd, micro} config/
 
 # X
 cp -r $HOME/{.xinitrc, .xprofile} config/
-
-pacman -Q > pacman_list.txt

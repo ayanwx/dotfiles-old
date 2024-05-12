@@ -1,1 +1,3 @@
-./.xinitrc
+#!/bin/sh
+
+~/.xinitrc

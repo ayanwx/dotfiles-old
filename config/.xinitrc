@@ -5,11 +5,16 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-SXHKD_SHELL=/bin/sh
-
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
+
+
+
+
+
+
+
     xrdb -merge $sysresources
 
 fi
@@ -19,7 +24,15 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
+
+
+
+
+
+
+
     xrdb -merge "$userresources"
+
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -35,10 +48,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-sh $HOME/.fehbg &
-xsetroot -cursor_name left_ptr &
-sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
+~/.fehbg &
 picom -fb &
-bspwm &
-eww open topbar --config $HOME/.config/eww/windows/topbar --restart &
-lxsession
+exec sxhkd &
+eww open leftbar --config $HOME/.config/eww/windows/leftbar --restart &
+exec bspwm &
+exec qbittorrent &
+exec discord &
+exec firefox
