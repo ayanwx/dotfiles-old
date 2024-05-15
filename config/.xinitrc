@@ -52,6 +52,7 @@ fi
 picom -fb &
 exec sxhkd &
 eww open leftbar --config $HOME/.config/eww/windows/leftbar --restart &
+eww open startmenu --config $HOME/.config/eww/windows/startmenu --restart &
 exec bspwm &
 exec qbittorrent &
 exec discord &
