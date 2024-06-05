@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
 
   services.xserver = {
     enable = true;
@@ -12,12 +13,11 @@
   };
 
   xdg.portal.lxqt.enable = true;
-  xdg.portal.config.common.default = ["gtk"];
+  xdg.portal.config.common.default = [ "gtk" ];
 
   services.picom = {
     enable = true;
     vSync = true;
     backend = "glx";
   };
-
 }

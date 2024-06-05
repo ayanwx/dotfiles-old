@@ -1,5 +1,6 @@
-{ ... }: {
-    systemd.user.services.feh = {
+{ ... }:
+{
+  systemd.user.services.feh = {
     enable = true;
     serviceConfig.Restart = "always";
     serviceConfig.ExecStart = "/bin/sh /home/ayanw/.fehbg";

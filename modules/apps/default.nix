@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.fish.enable = true;
   programs.firefox = {
     enable = true;
@@ -10,32 +11,69 @@
   environment.systemPackages = with pkgs; [
 
     # Esssentials
-    micro wget neofetch
+    micro
+    wget
+    neofetch
 
     # Utilities
-    bat eza du-dust zip imagemagick btrfs-progs compsize gh ranger fzf ripgrep tmux
+    bat
+    eza
+    du-dust
+    zip
+    imagemagick
+    btrfs-progs
+    compsize
+    gh
+    ranger
+    fzf
+    ripgrep
+    tmux
 
     # WM
-    eww kitty rofi dunst maim feh xclip pulseaudio pavucontrol gparted xfce.thunar xfce.tumbler sxhkd lxappearance
+    eww
+    kitty
+    rofi
+    dunst
+    maim
+    feh
+    xclip
+    pulseaudio
+    pavucontrol
+    gparted
+    xfce.thunar
+    xfce.tumbler
+    sxhkd
+    lxappearance
 
     # Media
-    spotify vlc playerctl
+    spotify
+    vlc
+    playerctl
 
     # Browsers
-    vivaldi floorp
+    vivaldi
+    floorp
 
     # Development
-    vscode neovim neovide
-    rustup go clang nodejs_22 python3
-    pipx yarn
+    vscode
+    neovim
+    neovide
+    rustup
+    go
+    clang
+    nodejs_22
+    python3
+    pipx
+    yarn
     ngrok
 
-    direnv nixfmt-rfc-style
+    direnv
+    nixfmt-rfc-style
 
-    blender godot_4
+    blender
+    godot_4
 
     # Torrent
     qbittorrent
-
   ];
 }

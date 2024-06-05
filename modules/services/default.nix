@@ -1,5 +1,4 @@
-{ ... }: {
-  imports = [
-    ./feh.nix
-  ];
+{ ... }:
+{
+  imports = [ ./feh.nix ];
 }

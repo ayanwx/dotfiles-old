@@ -1,4 +1,12 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+
+  imports = [ ./hardware-configuration.nix ];
 
   networking.hostName = "inductionCooker";
   networking.networkmanager.enable = true;
@@ -17,7 +25,7 @@
       "wheel"
     ];
     shell = pkgs.fish;
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   programs.git = {
@@ -29,5 +37,4 @@
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "23.11";
-
 }
