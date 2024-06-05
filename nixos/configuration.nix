@@ -1,25 +1,27 @@
+with builtins;
 {
   config,
   pkgs,
   lib,
+  settings,
   ...
 }:
 {
 
   imports = [ ./hardware-configuration.nix ];
 
-  networking.hostName = "inductionCooker";
+  networking.hostName = settings.hostname;
   networking.networkmanager.enable = true;
-  time.timeZone = "Asia/Dhaka";
+  time.timeZone = settings.timezone;
 
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
 
-  users.users.ayanw = {
+  users.users.${settings.username} = {
     isNormalUser = true;
-    description = "AyanW";
+    description = settings.name;
     extraGroups = [
       "networkmanager"
       "wheel"

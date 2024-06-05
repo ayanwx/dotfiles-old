@@ -7,9 +7,16 @@
 
   outputs =
     { self, nixpkgs, ... }@inputs:
+
+    let
+      settings = import ./settings.nix;
+    in
     {
-      nixosConfigurations."inductionCooker" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      nixosConfigurations.${settings.hostname} = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit settings;
+        };
+        system = settings.system;
         modules = [
           ./nixos/configuration.nix
 
