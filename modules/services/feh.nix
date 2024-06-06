@@ -1,9 +1,9 @@
-{ ... }:
+{ pkgs, settings, ... }:
 {
   systemd.user.services.feh = {
     enable = true;
     serviceConfig.Restart = "always";
-    serviceConfig.ExecStart = "/bin/sh /home/ayanw/.fehbg";
+    serviceConfig.ExecStart = "${pkgs.feh}/bin/feh --bg-scale ${settings.wallpaper_path}";
     wantedBy = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
   };

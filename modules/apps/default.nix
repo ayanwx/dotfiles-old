@@ -1,63 +1,66 @@
 { pkgs, ... }:
 {
-  programs.fish.enable = true;
+  programs.fish.enable = true; # fish shell
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox-devedition;
+    package = pkgs.firefox-devedition; # developer edition for webdev tools
   };
 
   services.flatpak.enable = true;
 
   environment.systemPackages = with pkgs; [
 
-    # Esssentials
-    micro
+    # { Esssentials
+    micro # editor
     wget
     neofetch
+    # }
 
-    # Utilities
-    bat
-    eza
-    du-dust
+    # { Utilities
+    bat # better cat
+    eza # better ls
+    du-dust # better du
+    ripgrep # better grep
     zip
-    imagemagick
+    imagemagick # image editing tools
     btrfs-progs
     compsize
-    gh
-    ranger
-    fzf
-    ripgrep
+    gh # github cli
+    ranger # cli file manager
+    fzf # file search
     tmux
+    # }
 
-    # WM
-    eww
-    kitty
-    rofi
-    dunst
-    maim
-    feh
-    xclip
-    pulseaudio
-    pavucontrol
+    # { WM
+    eww # widgets
+    kitty # terminal emulator
+    rofi # app launcher
+    dunst # notifications
+    maim # screenshots
+    feh # image viewer, wallpaper
+    xclip # clipboard manager
+    pavucontrol # pulseaudio volume control
     gparted
     xfce.thunar
-    xfce.tumbler
-    sxhkd
-    lxappearance
+    xfce.tumbler # thumbnails for thunar
+    lxappearance # gtk theming
+    # }
 
-    # Media
+    # { Media
     spotify
     vlc
     playerctl
+    # }
 
-    # Browsers
+    # { Browsers
     vivaldi
     floorp
+    # }
 
-    # Development
+    # { Development
     vscode
     neovim
-    neovide
+    neovide # gui for neovim
     rustup
     go
     clang
@@ -68,12 +71,14 @@
     ngrok
 
     direnv
-    nixfmt-rfc-style
+    nixfmt-rfc-style # nix language formatter
 
     blender
     godot_4
+    # }
 
-    # Torrent
+    # { Torrent
     qbittorrent
+    # }
   ];
 }
