@@ -20,5 +20,6 @@
     micro # editor
     wget # downloader
     neofetch # most important
+    home-manager
   ];
 }
