@@ -12,9 +12,6 @@
     };
   };
 
-  xdg.portal.lxqt.enable = true;
-  xdg.portal.config.common.default = [ "gtk" ];
-
   services.picom = {
     enable = true;
     vSync = true;

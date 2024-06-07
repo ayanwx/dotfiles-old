@@ -33,6 +33,7 @@
             ./modules/locale
             ./modules/services
             ./modules/xserver
+            ./modules/xdg
             ./modules/fonts
             ./modules/sound
             ./modules/apps

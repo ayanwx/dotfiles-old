@@ -11,6 +11,7 @@
 
     ./gui/wm.nix
     ./gui/browsers.nix
+    ./gui/social.nix
     ./gui/development.nix
     ./gui/media.nix
     ./gui/torrent.nix
