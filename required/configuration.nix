@@ -3,11 +3,15 @@
   pkgs,
   lib,
   settings,
+  inputs,
   ...
 }:
 {
 
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
   networking.hostName = settings.hostname;
   networking.networkmanager.enable = true;
@@ -27,6 +31,14 @@
     ];
     shell = pkgs.fish;
     packages = with pkgs; [ ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit settings;
+    };
+    users.${settings.username} = import ./home.nix;
   };
 
   programs.git = {
