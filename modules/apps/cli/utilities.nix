@@ -13,6 +13,8 @@
     p7zip # archive manager
     btrfs-progs # betterfs
     lynx # web browser
+    glow # markdown reader
+    tokei # SLOC
     compsize
     tmux
   ];
