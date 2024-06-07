@@ -1,13 +1,14 @@
 { pkgs, settings, ... }:
 {
-  systemd.user.services.feh = {
+  systemd.user.services.udiskie = {
     enable = true;
     serviceConfig = {
       Restart = "always";
-      ExecStart = "${pkgs.feh}/bin/feh --bg-scale ${settings.wallpaper_path}";
+      ExecStart = "${pkgs.udiskie}/bin/udiskie";
     };
     wantedBy = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
   };
-  environment.systemPackages = [ pkgs.feh ];
+  services.udisks2.enable = true;
+  environment.systemPackages = [ pkgs.udiskie ];
 }

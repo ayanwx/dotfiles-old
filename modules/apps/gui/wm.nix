@@ -6,7 +6,7 @@
     rofi # app launcher
     dunst # notifications
     maim # screenshots
-    feh # image viewer, wallpaper
+    #feh # image viewer, wallpaper # -> services.feh
     pavucontrol # pulseaudio volume control
     lxappearance # gtk theming
     xfce.tumbler # thumbnails for thunar
