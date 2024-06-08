@@ -1,8 +1,7 @@
 <div align="center">
 
-![NixOS.png](./.github/assets/nixos-200.png "NixOS Logo")
-
-# AyanW's NixOS Config
+<img src=".github/assets/banner-dark.svg#gh-dark-mode-only" >
+<img src=".github/assets/banner-light.svg#gh-light-mode-only" >
 
 </div>
 
