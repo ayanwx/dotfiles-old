@@ -39,6 +39,7 @@
       inherit settings;
     };
     users.${settings.username} = import ./home.nix;
+    backupFileExtension = "backup";
   };
 
   programs.git = {

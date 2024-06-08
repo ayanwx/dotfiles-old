@@ -1,0 +1,13 @@
+(include "./widgets/_desktop_switcher.yuck")
+
+(defwidget center []
+    (box
+        :halign "center"
+        :spacing 1
+        (_desktop_switcher :desktop 1)
+        (_desktop_switcher :desktop 2)
+        (_desktop_switcher :desktop 3)
+        (_desktop_switcher :desktop 4)
+        (_desktop_switcher :desktop 5)
+    )
+)

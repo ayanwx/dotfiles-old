@@ -1,0 +1,6 @@
+(defvar pfp  "../../img/avatar.png")
+(defvar user "AyanW")
+(defvar celcius "°C")
+(defvar fahrenheit "°F")
+
+(defpoll uptime :initial "0h 0m" :interval "60s" "uptime | rg 'up ' -r '' | rg ' hour[|s],' -r 'H' | rg ' minute[|s]' -r 'M'")

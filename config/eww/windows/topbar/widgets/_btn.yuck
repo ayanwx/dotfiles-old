@@ -1,0 +1,10 @@
+(defwidget _button [_class _tooltip _text]
+    (eventbox
+        :cursor "pointer"
+        (label
+            :class    "btn ${_class}"
+            :tooltip  _tooltip
+            :text     _text 
+        )
+    )
+)

@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
 
   services.xserver = {
@@ -17,4 +17,6 @@
     vSync = true;
     backend = "glx";
   };
+
+  environment.systemPackages = [ pkgs.xorg.xrandr ];
 }

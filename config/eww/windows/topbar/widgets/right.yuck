@@ -1,0 +1,31 @@
+(include "./widgets/_volume.yuck")
+
+(defwidget right []
+    (box
+        :class "right"
+        :halign "end"
+        :space-evenly false
+        :spacing 10
+        (label
+            :class   "btn cpu"
+            :tooltip "CPU usage"
+            :text    "${i_cpu} ${round(EWW_CPU.avg, 2)}%"
+        )
+        (label
+            :class   "btn ram"
+            :tooltip "RAM usage"
+            :text    "${i_ram} ${round(EWW_RAM.used_mem / 1024/1024/1024, 2)} GB"
+        )
+        (label
+            :class   "btn storage"
+            :tooltip "Storage usage"
+            :text    "${i_sdcard} ${round(EWW_DISK['/'].used / 1024/1024/1024, 2)} GB"
+        )
+        (_volume)
+        (button
+            :class   "btn clock"
+            :tooltip "Calendar"
+            (label   :text "${i_calendar} ${formattime(time, '%H:%M:%S')}")
+        )   
+    )
+)

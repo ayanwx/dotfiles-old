@@ -1,0 +1,125 @@
+(include "../../variables/icons.yuck")
+(include "../../variables/others.yuck")
+
+(defwindow leftbar
+    :monitor 0
+    :geometry (geometry
+        :x      "0%"
+        :y      "0%"
+        :width  "2.5%"
+        :height "100%"
+        :anchor "center left"
+    )
+    :stacking   "bg"
+    :windowtype "dock"
+    :reserve (struts
+        :distance "2.5%"
+        :side     "left"
+    )
+    :wm-ignore false
+    (box
+        :orientation "vertical"
+        (box
+            :orientation  "vertical"
+            :valign       "start"
+            :space-evenly false
+            :spacing 0
+            (starmenu_button)
+            (box
+                :orientation "vertical"
+                :valign      "start"
+                :halign      "center"
+                :class       "switcher-group"
+                :spacing 5
+                (desktop_switcher :desktop 1)
+                (desktop_switcher :desktop 2)
+                (desktop_switcher :desktop 3)
+                (desktop_switcher :desktop 4)
+                (desktop_switcher :desktop 5)
+            )
+        )
+        (box
+            :orientation  "vertical"
+            :valign       "end"
+            :space-evenly false
+            :spacing      0
+            (stats
+                :classname "storage"
+                :value     "${i_sdcard}  ${round(EWW_DISK['/'].used / 1024/1024/1024, 2)} GB"
+            )
+            (stats
+                :classname "ram"
+                :value     "${i_ram}  ${round(EWW_RAM.used_mem / 1024/1024/1024, 2)} GB"
+            )
+            (stats
+                :classname "cpu"
+                :value     "${i_cpu}  ${round(EWW_CPU.avg, 2)}%"
+            )
+            (datetime)
+        )
+    )
+)
+
+(defwidget starmenu_button []
+    (eventbox
+        :cursor  "pointer"
+        :onclick "eww open --toggle startmenu --config $HOME/.config/eww/windows/startmenu"
+        (image
+            :image-height 24
+            :image-width  24
+            :class        "startbtn"
+            :path         "../../img/nixos.svg"
+        )
+    )
+)
+
+(defwidget desktop_switcher [desktop]
+    (eventbox
+        :onclick "bspc desktop -f ${desktop}"
+        :cursor  "pointer"
+        :halign  "center"
+        (label 
+            :class {
+                (focused_desktop == desktop)
+                    ? "switcher active"
+                    : (arraylength(search(occupied_desktops, "${desktop}")) > 0)
+                        ? "switcher occupied"
+                        : "switcher"
+            }
+            :text {
+                (focused_desktop == desktop || (arraylength(search(occupied_desktops, "${desktop}")) > 0))
+                    ? i_desktop_focused
+                    : i_desktop_empty
+            }
+        )
+    )
+)
+
+(defwidget stats [value classname]
+    (eventbox
+        :cursor "pointer"
+        (box
+            :class  "stats ${classname}"
+            :halign "center"
+            (label
+                :angle 90
+                :text "${value}"
+            )
+        )
+    )
+)
+
+(defwidget datetime []
+    (eventbox
+        :cursor "pointer"
+        (box
+            :class       "stats datetime"
+            :orientation "vertical"
+            :valign      "center"
+            :halign      "center"
+            :spacing     1
+            (label :text "${formattime(time, '%H')}")
+            (label :text "${formattime(time, '%M')}")
+        )
+    )
+)

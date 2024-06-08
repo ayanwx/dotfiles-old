@@ -1,0 +1,46 @@
+@import "../../variables/colors/tokyonight-candy.scss";
+
+// [margin/padding]: top right bottom left
+* {
+    all: unset;
+    font-family: "FantasqueSansM Nerd Font";
+}
+
+window {
+    background: $color-0;
+    font-size: 1em;
+}
+
+.left {
+    background : $color-8;
+    margin-left: 0.5em;
+    padding    : 0.25em 0.5em 0.25em 0.5em;
+}
+
+.btn {
+    background: $color-8;
+    padding   : 0.25em 0.6em 0.25em 0.6em;
+}
+
+//left
+.start   { color: $color-6; }
+.network { color: $color-1; }
+
+// center
+.switcher {
+    color     : $color-7;
+    padding   : 0 0.6em 0 0.4em;
+    font-size : 0.85em;
+    transition: 350ms linear;
+}
+.switcher.active   { color: $color-6; }
+
+// right
+.right {
+    padding-right: 0.5em;
+}
+.cpu     { color: $color-6; }
+.ram     { color: $color-2; }
+.storage { color: $color-3; }
+.volume  { color: $color-1; }
+.clock   { color: $color-6; }

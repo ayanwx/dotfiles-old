@@ -1,0 +1,20 @@
+(defwidget left []
+    (box
+        :class   "left"
+        :halign  "start"
+        :spacing 5
+        (eventbox
+            :class   "start"
+            :tooltip "Start"
+            :cursor  "pointer"
+            :onclick "$HOME/.config/eww/scripts/power-menu.sh"
+            (label   :text "${i_start_menu} ")
+        )
+        (eventbox
+            :class   "network"
+            :cursor  "pointer"
+            :tooltip "Network usage"
+            (label   :text "${i_wifi_connected} ")
+        )
+    )
+)

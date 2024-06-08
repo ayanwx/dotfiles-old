@@ -1,0 +1,87 @@
+(include "../../variables/startmenu.yuck")
+(include "../../variables/icons.yuck")
+
+(defwindow startmenu
+    :monitor 0
+    :geometry (geometry
+        :x      "2.9%"
+        :y      "0.7%"
+        :width  "15%"
+        :height "45%"
+        :anchor "top left"
+    )
+    :stacking   "bg"
+    :windowtype "normal"
+    :wm-ignore true
+    (box
+        :space-evenly false
+        :spacing 0
+        :valign "start"
+        :halign "center"
+        :orientation "vertical"
+        (uptime)
+        (userinfo)
+        (box
+            :halign "center"
+            (wifi)
+            (weather)
+        )
+    )
+)
+
+(defwidget uptime []
+    (box
+        :class "uptime"
+        :spacing 150
+        (label :text "UPTIME")
+        (label :text uptime)
+    )
+)
+
+(defwidget userinfo []
+    (box
+        :class "userinfo"
+        (box
+            :orientation "vertical"
+            :space-evenly false
+            :spacing 17
+            (image
+                :class "avatar"
+                :path pfp
+                :height 100
+                :width 100
+            )
+            (box
+                :orientation "vertical"
+                :space-evenly false
+                (label :class "uname" :text "AyanW")
+                (label :class "host" :text "@inductionCooker")
+            )
+        )
+    )
+)
+
+(defwidget wifi []
+    (box
+        :class "wifi"
+        :halign "center"
+        :space-evenly false
+        :spacing 100
+        (box
+            :space-evenly false
+            (label :text "${i_wifi_connected}  enp34s0")
+        )
+    )
+)
+
+(defwidget weather []
+    (box
+        :class "wifi"
+        :halign "center"
+        :space-evenly false
+        (box
+            (label :text "  30${celcius}")
+        )
+    )
+)
+

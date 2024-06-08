@@ -12,5 +12,6 @@
     xfce.tumbler # thumbnails for thunar
     xfce.thunar
     gparted
+    sxhkd
   ];
 }

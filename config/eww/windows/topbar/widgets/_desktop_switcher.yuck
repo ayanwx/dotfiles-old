@@ -1,0 +1,20 @@
+(defwidget _desktop_switcher [desktop]
+    (eventbox
+        :tooltip "Switch to desktop ${desktop}"
+        :onclick "bspc desktop -f ${desktop}"
+        :cursor  "pointer"
+        (label 
+            :class { 
+                (focused_desktop == desktop)
+                    ? "switcher active"
+                    : (arraylength(search(occupied_desktops, "${desktop}")) > 0)
+                        ? "switcher occupied"
+                        : "switcher"
+            }
+            :text {
+                (focused_desktop == desktop || (arraylength(search(occupied_desktops, "${desktop}")) > 0))
+                    ? i_desktop_focused
+                    : i_desktop_empty
+        })
+    )
+)

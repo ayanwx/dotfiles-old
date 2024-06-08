@@ -1,0 +1,3 @@
+(defpoll time  :initial 0  :interval "1s"    `date +"%s"`)
+(defpoll focused_desktop   :interval "250ms" "bspc query -D -d .focused --names")
+(defpoll occupied_desktops :interval "1s"    "bspc query -D -d .occupied --names")
