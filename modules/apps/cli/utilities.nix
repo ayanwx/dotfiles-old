@@ -15,6 +15,7 @@
     lynx # web browser
     glow # markdown reader
     tokei # SLOC
+    yt-dlp # youtoob downloader
     compsize
     tmux
   ];

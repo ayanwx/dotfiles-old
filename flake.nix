@@ -31,14 +31,14 @@
           modules = [
             ./required/configuration.nix
 
-            ./modules/boot
-            ./modules/locale
-            ./modules/services
-            ./modules/xserver
-            ./modules/xdg
-            ./modules/fonts
-            ./modules/sound
-            ./modules/apps
+            ./modules/boot # bootloader settings
+            ./modules/locale # locale settings
+            ./modules/services # systemd services
+            ./modules/xserver # xorg-xserver
+            ./modules/xdg # xdg desktop portals
+            ./modules/fonts # fonts & nerd fonts
+            ./modules/sound # sound settings
+            ./modules/apps # apps, modularized into cli & gui
           ];
           system = settings.system;
         };
