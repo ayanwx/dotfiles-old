@@ -1,0 +1,17 @@
+@import "theme/colors.rasi"
+@import "theme/elements.rasi"
+
+configuration {
+  //drun-display-format: "{icon} {name}";
+  modi: "drun";
+  font: "FantasqueSansM Nerd Font 12";
+  eh: 1; 
+  location: 0;
+  sort: true;
+  case-sensitivity: false;
+  sorting-method: "fzf";
+  //hide-scrollbar: true;
+  //display-drun: "";
+  sidebar-mode: true;
+  hover-select: true;
+}

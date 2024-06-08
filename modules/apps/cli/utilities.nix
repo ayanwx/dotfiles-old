@@ -16,6 +16,8 @@
     glow # markdown reader
     tokei # SLOC
     yt-dlp # youtoob downloader
+    jq # json thingy
+    bottom # system usage graph
     compsize
     tmux
   ];

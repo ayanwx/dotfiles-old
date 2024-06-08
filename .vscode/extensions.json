@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "pinage404.nix-extension-pack",
+        "christian-kohler.path-intellisense"
+    ]
+}
