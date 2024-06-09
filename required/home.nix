@@ -8,6 +8,8 @@
   home.username = settings.username;
   home.homeDirectory = "/home/${settings.username}";
 
+  home.packages = [ pkgs.dconf ];
+
   home.file = {
     ".config/fish/fish_variables".source = ../config/fish/fish_variables;
     ".config/sxhkd/scripts/take-screenshot.fish".source = ../config/sxhkd/scripts/take-screenshot.fish;
@@ -268,6 +270,24 @@
             follow = true;
           };
         };
+      };
+    };
+  };
+
+  gtk = {
+    enable = true;
+    font = {
+      package = pkgs.nerdfonts;
+      name = "FantasqueSansM Nerd Font";
+      size = 10;
+    };
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+      accent = "blue";
+      icon = {
+        enable = true;
+        accent = "blue";
       };
     };
   };

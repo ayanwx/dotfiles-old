@@ -38,7 +38,12 @@
       inherit inputs;
       inherit settings;
     };
-    users.${settings.username} = import ./home.nix;
+    users.${settings.username} = {
+      imports = [
+        ./home.nix
+        inputs.catppuccin.homeManagerModules.catppuccin
+      ];
+    };
     backupFileExtension = "backup";
   };
 
