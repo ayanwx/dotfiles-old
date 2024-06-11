@@ -5,16 +5,8 @@
   services.flatpak.enable = true;
 
   imports = [
-
-    ./cli/utilities.nix
-    ./cli/development.nix
-
-    ./gui/wm.nix
-    ./gui/browsers.nix
-    ./gui/social.nix
-    ./gui/development.nix
-    ./gui/media.nix
-    ./gui/torrent.nix
+    ./cli
+    ./gui
   ];
 
   environment.systemPackages = with pkgs; [

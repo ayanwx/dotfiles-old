@@ -6,9 +6,9 @@
     rustup
     go
     clang
+    lua
     nodejs_22
-    python3
-    pipx
+    python312
     yarn
     ngrok
 
