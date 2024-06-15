@@ -29,6 +29,8 @@
         du = "dust";
         cat = "bat --theme base16 --paging never -p";
         icat = "kitty icat";
+        prismlauncher = "~/Documents/PrismLauncher/result/bin/prismlauncher";
+        spotblock = "~/Documents/spotblock-rs/target/release/spotblock-rs";
         fucking = "sudo";
       };
       functions = {

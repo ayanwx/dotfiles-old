@@ -6,6 +6,7 @@
     ./media.nix
     ./social.nix
     ./torrent.nix
+    ./gaming.nix
     ./wm.nix
   ];
 }
