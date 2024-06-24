@@ -8,8 +8,6 @@
   home.username = settings.username;
   home.homeDirectory = "/home/${settings.username}";
 
-  home.packages = [ pkgs.dconf ];
-
   home.file = {
     ".config/fish/fish_variables".source = ../config/fish/fish_variables;
     ".config/sxhkd/scripts/take-screenshot.fish".source = ../config/sxhkd/scripts/take-screenshot.fish;
@@ -29,7 +27,6 @@
         du = "dust";
         cat = "bat --theme base16 --paging never -p";
         icat = "kitty icat";
-        prismlauncher = "~/Documents/PrismLauncher/result/bin/prismlauncher";
         spotblock = "~/Documents/spotblock-rs/target/release/spotblock-rs";
         fucking = "sudo";
       };

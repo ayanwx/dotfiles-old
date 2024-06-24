@@ -5,5 +5,6 @@
     neovide # gui for nvim
     blender
     godot_4
+    aseprite
   ];
 }

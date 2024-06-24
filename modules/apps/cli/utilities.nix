@@ -18,6 +18,8 @@
     yt-dlp # youtoob downloader
     jq # json thingy
     bottom # system usage graph
+    dconf
+    killall
     compsize
     tmux
   ];
