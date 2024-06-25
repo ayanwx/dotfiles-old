@@ -40,7 +40,7 @@
     };
     users.${settings.username} = {
       imports = [
-        ./home.nix
+        ../modules/home-manager
         inputs.catppuccin.homeManagerModules.catppuccin
       ];
     };
