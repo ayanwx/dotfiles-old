@@ -1,3 +1,5 @@
+# CC: https://github.com/loystonpais/nixconfig/blob/main/overlays/mc-launcher-patch.nix
+
 {
   config,
   pkgs,

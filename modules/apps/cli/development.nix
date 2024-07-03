@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    neovim
+    #neovim
 
     rustup
     go
@@ -12,7 +12,6 @@
     yarn
     ngrok
 
-    direnv
     nixfmt-rfc-style # nix language formatter
     nil # nix language server
   ];

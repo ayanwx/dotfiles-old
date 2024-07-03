@@ -6,7 +6,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vivaldi
+    #vivaldi
     floorp
   ];
 }

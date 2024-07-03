@@ -11,8 +11,9 @@
     imagemagick # image editing tools
     xclip # clipboard manager
     p7zip # archive manager
+    unrar # un-rar
     btrfs-progs # betterfs
-    lynx # web browser
+    #lynx # web browser
     glow # markdown reader
     tokei # SLOC
     yt-dlp # youtoob downloader

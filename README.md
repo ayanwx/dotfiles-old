@@ -8,7 +8,8 @@
 ## Build Instructions
  - Clone this repo
  - Replace `./required/hardware-configuration.nix` with your own hardware config.
- - (WSL) Disable GUI apps [[./modules/apps/default.nix](modules/apps/default.nix)]
+ - (WSL) Disable GUI apps [[./modules/apps/default.nix](modules/apps)]
+ - (WSL) Disable home-manager services [[./modules/home-manager/services/default.nix](./modules/home-manager/services)]
  - (WSL) Disable systemd services [[./flake.nix](flake.nix)]
  - Run `sudo nixos-rebuild [switch|boot|whatever]`
 
@@ -16,7 +17,7 @@
  - `./settings.nix`: self-explanatory, read the file
  - `./required/configuration.nix`: replacement for `/etc/nixos/configuration.nix`, modularized into `./modules/`
  - `./required/hardware-configuration.nix`: replacement for `/etc/nixos/hardware-configuration.nix`
- - `./required/home.nix`: home-manager configuration
+ - `./modules/home-manager`: home-manager configuration
  - `./config/`: files that will be in `~/.config/`
 
 [TO-DO]
