@@ -25,7 +25,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/e4751418-8605-4468-8cee-974167cd0fde";
+    device = "/dev/disk/by-uuid/890bfdca-32b3-44f4-9b56-49aa6473cad0";
     fsType = "ext4";
   };
 
@@ -39,10 +39,10 @@
   };
 
   fileSystems."/home/ayanw/Media" = {
-    device = "/dev/disk/by-uuid/a1b29023-0f81-4d2e-9d8d-925c09642c53";
-    fsType = "btrfs";
-    options = [ "compress-force=zstd:6" ];
+    device = "/dev/disk/by-uuid/02EE33066C2A8E83";
+    fsType = "ntfs";
   };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

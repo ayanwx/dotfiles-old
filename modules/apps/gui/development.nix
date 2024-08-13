@@ -2,9 +2,11 @@
 {
   environment.systemPackages = with pkgs; [
     vscode
+    zed-editor
     #neovide # gui for nvim
     blender
     godot_4
     aseprite
+    #figma-linux
   ];
 }

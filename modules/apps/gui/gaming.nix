@@ -3,11 +3,12 @@
 
   imports = [ ../../overlays/prismlauncher.nix ];
 
-  programs.steam.enable = true;
+  #programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
-    lutris
+    #lutris
     jdk21
+    jdk8
     prismlauncher
     xclicker
   ];

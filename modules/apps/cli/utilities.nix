@@ -19,6 +19,8 @@
     yt-dlp # youtoob downloader
     jq # json thingy
     bottom # system usage graph
+    ntfs3g # ntfs
+    cloudflare-warp # 1.1.1.1
     dconf
     killall
     compsize
