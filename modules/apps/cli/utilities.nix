@@ -20,7 +20,7 @@
     jq # json thingy
     bottom # system usage graph
     ntfs3g # ntfs
-    cloudflare-warp # 1.1.1.1
+    #cloudflare-warp # 1.1.1.1
     dconf
     killall
     compsize

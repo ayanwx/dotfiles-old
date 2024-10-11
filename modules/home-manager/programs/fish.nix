@@ -10,14 +10,11 @@
       icat = "kitty icat";
       spotblock = "~/Documents/spotblock-rs/target/release/spotblock-rs";
       fucking = "sudo";
+      os_rebuild = "nixos-rebuild switch --flake ~/dotfiles --show-trace";
     };
     interactiveShellInit = ''
-      set --export XDG_CONFIG_HOME "$HOME/.config"
-      set --export XDG_CACHE_HOME "$HOME/.cache"
-      set --export XDG_BIN_HOME "$HOME/dotfiles/scripts/bin"
-      set --export NIXPKGS_ALLOW_UNFREE 1
-
-      fish_add_path $XDG_BIN_HOME
+      fish_add_path $ANDROID_HOME/emulator
+      fish_add_path $ANDROID_HOME/platform-tools
     '';
     functions = {
       fish_greeting = {

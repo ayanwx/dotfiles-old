@@ -23,14 +23,15 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/890bfdca-32b3-44f4-9b56-49aa6473cad0";
+    device = "/dev/disk/by-uuid/b4cee15d-c99d-4d0a-a8b7-f17aaea03a89";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/9663-BAD6";
+    device = "/dev/disk/by-uuid/2A1A-2172";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -40,7 +41,11 @@
 
   fileSystems."/home/ayanw/Media" = {
     device = "/dev/disk/by-uuid/02EE33066C2A8E83";
-    fsType = "ntfs";
+    fsType = "ntfs-3g";
+    options = [
+      "rw"
+      "uid=ayanw"
+    ];
   };
 
   swapDevices = [ ];

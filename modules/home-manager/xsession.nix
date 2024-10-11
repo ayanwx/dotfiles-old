@@ -27,7 +27,10 @@
         extraConfigEarly = "pgrep -x sxhkd > /dev/null || sxhkd &";
         extraConfig = ''
           eww open leftbar --restart --config /home/ayanw/.config/eww/windows/leftbar &
-          eww open startmenu --restart --config /home/ayanw/.config/eww/windows/startmenu
+          systemctl --user import-environment PATH &
+          systemctl --user restart xdg-desktop-portal.service &
+          xset -dpms &
+          setterm -blank 0 -powerdown 0
         '';
         rules = {
           Thunar = {

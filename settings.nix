@@ -1,7 +1,7 @@
 {
   name = "AyanW";
   username = "ayanw";
-  hostname = "inductionCooker";
+  hostname = "nixos";
 
   gh_username = "ayanwx";
   gh_email = "ayanxdev@gmail.com";

@@ -12,6 +12,8 @@
     #yarn
     #ngrok
 
+    watchman
+
     nixfmt-rfc-style # nix language formatter
     nil # nix language server
   ];

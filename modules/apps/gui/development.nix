@@ -7,6 +7,8 @@
     blender
     godot_4
     aseprite
+    android-studio
+    android-tools
     #figma-linux
   ];
 }
