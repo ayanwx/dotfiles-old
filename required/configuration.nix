@@ -7,20 +7,33 @@
   ...
 }:
 {
-
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
-  networking.hostName = settings.hostname;
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = settings.hostname;
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPortRanges = [
+        {
+          from = 1000;
+          to = 9999;
+        }
+      ];
+    };
+  };
   time.timeZone = settings.timezone;
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    substituters = [ "https://ezkea.cachix.org" ];
+    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
+  };
 
   users.users.${settings.username} = {
     isNormalUser = true;
@@ -47,14 +60,17 @@
     backupFileExtension = "backup";
   };
 
-  programs.git = {
-    enable = true;
-    config = {
-      init.defaultbranch = "main";
+  programs = {
+    git = {
+      enable = true;
+      config = {
+        init.defaultbranch = "main";
+      };
     };
+    nix-ld.enable = true;
+    anime-game-launcher.enable = true;
   };
 
-  programs.nix-ld.enable = true;
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "23.11";
 }

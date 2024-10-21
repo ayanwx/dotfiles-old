@@ -10,7 +10,7 @@
       icat = "kitty icat";
       spotblock = "~/Documents/spotblock-rs/target/release/spotblock-rs";
       fucking = "sudo";
-      os_rebuild = "nixos-rebuild switch --flake ~/dotfiles --show-trace";
+      os_rebuild = "sudo nixos-rebuild switch --flake ~/dotfiles --show-trace";
     };
     interactiveShellInit = ''
       fish_add_path $ANDROID_HOME/emulator

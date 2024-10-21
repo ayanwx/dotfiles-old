@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -16,6 +20,7 @@
       nixpkgs,
       catppuccin,
       home-manager,
+      aagl,
       ...
     }@inputs:
 
@@ -30,7 +35,9 @@
             inherit settings;
             inherit inputs;
           };
+
           modules = [
+
             ./required/configuration.nix
 
             ./modules/boot # bootloader settings
@@ -41,6 +48,11 @@
             ./modules/fonts # fonts & nerd fonts
             ./modules/sound # sound settings
             ./modules/apps # apps, modularized into cli & gui
+
+            {
+              imports = [ aagl.nixosModules.default ];
+              nix.settings = aagl.nixConfig;
+            }
           ];
           system = settings.system;
         };
