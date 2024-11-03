@@ -3,7 +3,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      package = pkgs.nerdfonts;
+      #package = pkgs.nerdfonts;
       name = "FantasqueSansM Nerd Font";
       size = 12;
     };

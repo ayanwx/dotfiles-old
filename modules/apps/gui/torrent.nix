@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ qbittorrent ];
+  environment.systemPackages = with pkgs; [
+    qbittorrent
+    motrix
+  ];
 }

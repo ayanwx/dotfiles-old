@@ -1,4 +1,6 @@
 { ... }:
 {
-  imports = [ ./sxhkd.nix ];
+  imports = [
+    ./sxhkd.nix
+  ];
 }

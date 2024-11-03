@@ -21,6 +21,7 @@
     bottom # system usage graph
     ntfs3g # ntfs
     #cloudflare-warp # 1.1.1.1
+    gdu # graphical du
     dconf
     killall
     compsize

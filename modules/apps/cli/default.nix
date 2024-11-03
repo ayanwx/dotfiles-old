@@ -5,5 +5,7 @@
     ./utilities.nix
     ./languagePackages/nodejs.nix
     ./languagePackages/python.nix
+
+    ./openssh.nix
   ];
 }

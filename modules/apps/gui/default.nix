@@ -8,5 +8,6 @@
     ./torrent.nix
     ./gaming.nix
     ./wm.nix
+    ./virtualization.nix
   ];
 }

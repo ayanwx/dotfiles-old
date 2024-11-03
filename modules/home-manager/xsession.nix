@@ -30,13 +30,34 @@
           systemctl --user import-environment PATH &
           systemctl --user restart xdg-desktop-portal.service &
           xset -dpms &
-          setterm -blank 0 -powerdown 0
+          xset s off
         '';
         rules = {
           Thunar = {
             state = "floating";
             follow = true;
           };
+          gcolor3 = {
+            state = "floating";
+            follow = true;
+          };
+          qbittorrent = {
+            state = "floating";
+            follow = true;
+          };
+          Emulator = {
+            state = "floating";
+            follow = true;
+          };
+          "An Anime Game Launcher" = {
+            state = "floating";
+            follow = true;
+          };
+          "jetbrains-studio" = {
+            state = "floating";
+            follow = true;
+          };
+
         };
       };
     };

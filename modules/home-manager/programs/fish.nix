@@ -5,7 +5,7 @@
     shellAliases = {
       ls = "eza --icons auto";
       tree = "eza --tree --icons auto";
-      du = "dust";
+      #du = "dust";
       cat = "bat --theme base16 --paging never -p";
       icat = "kitty icat";
       spotblock = "~/Documents/spotblock-rs/target/release/spotblock-rs";

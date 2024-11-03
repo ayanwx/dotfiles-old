@@ -10,5 +10,7 @@
     android-studio
     android-tools
     #figma-linux
+    gcolor3
+    inkscape-with-extensions
   ];
 }
